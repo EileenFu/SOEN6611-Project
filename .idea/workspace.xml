@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data.">
+      <change afterPath="$PROJECT_DIR$/src/application/homescreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/signup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/HomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/HomeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1760110574839</updated>
       <workItem from="1760110575985" duration="9103000" />
-      <workItem from="1760126654606" duration="374000" />
+      <workItem from="1760126654606" duration="2202000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up directory, moved models and services folders into the src folder.">
       <option name="closed" value="true" />
@@ -132,7 +140,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760119711480</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data.">
+      <option name="closed" value="true" />
+      <created>1760127230107</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760127230107</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data.">
+      <option name="closed" value="true" />
+      <created>1760127241175</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760127241175</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
