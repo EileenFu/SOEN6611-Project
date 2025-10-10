@@ -7,7 +7,7 @@
 <StackPane xmlns:fx="http://javafx.com/fxml"
            fx:controller="application.controllers.SignupController"
            prefWidth="500" prefHeight="600"
-           stylesheets="@/application/signup.css"
+           stylesheets="@/application/css/signup.css"
            style="-fx-background-color: #f5f5f5;">
 
     <!-- Form Container -->
