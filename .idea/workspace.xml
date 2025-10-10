@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="cleaned up directory, moved models and services folders into the src folder.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Data/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/MainScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/UserManager.java" afterDir="false" />
+    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SOEN6611-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOEN6611-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/SignupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,51 +29,51 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "RayaneDescartes"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RayaneDescartes&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/EileenFu/SOEN6611-Project.git",
-    "accountId": "939b8a75-f72e-4c4d-a91b-814701c263b9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EileenFu/SOEN6611-Project.git&quot;,
+    &quot;accountId&quot;: &quot;939b8a75-f72e-4c4d-a91b-814701c263b9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="33sfCmq9bz7flY4Tgu0KNfhGxvR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TVM.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "TVM.java",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TVM.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TVM.java&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="application.controllers" />
@@ -119,7 +105,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760110574839</updated>
-      <workItem from="1760110575985" duration="8711000" />
+      <workItem from="1760110575985" duration="9103000" />
+      <workItem from="1760126654606" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up directory, moved models and services folders into the src folder.">
       <option name="closed" value="true" />
@@ -137,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760113303334</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data.">
+      <option name="closed" value="true" />
+      <created>1760119711480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760119711480</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cleaned up directory, moved models and services folders into the src folder." />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up directory, moved models and services folders into the src folder." />
+    <MESSAGE value="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data." />
   </component>
 </project>
