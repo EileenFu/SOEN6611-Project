@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="application.controllers.SignupController"
+           prefWidth="500" prefHeight="600"
+           style="-fx-background-color: #f5f5f5;">
+
+    <!-- Form Container -->
+    <VBox spacing="15" alignment="CENTER" maxWidth="400"
+          style="-fx-background-color: #ffffff; -fx-padding: 30; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #cccccc;">
+
+        <!-- Page Title -->
+        <Label text="Sign Up" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+        <!-- Full Name -->
+        <TextField fx:id="nameField" promptText="Full Name" maxWidth="Infinity"/>
+
+        <!-- Email -->
+        <TextField fx:id="emailField" promptText="Email" maxWidth="Infinity"/>
+
+        <!-- Password -->
+        <PasswordField fx:id="passwordField" promptText="Password" maxWidth="Infinity"/>
+
+        <!-- Confirm Password -->
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" maxWidth="Infinity"/>
+
+        <!-- Birthdate -->
+        <DatePicker fx:id="birthdatePicker" promptText="Birthdate" maxWidth="Infinity"/>
+
+
+        <!-- Buttons -->
+        <HBox spacing="10" maxWidth="Infinity">
+            <Button text="Back" onAction="#goBack"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Sign Up"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>
