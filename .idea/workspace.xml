@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/controllers/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/.idea/libraries/javafx_fxml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/TVM.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/build.fxbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/Images/iGo_Loading_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/Images/iGo_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/application/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/application/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/application/controllers/HomeScreenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/application/controllers/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/application/controllers/StartupController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/HomeScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/Login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/StartupScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/signup.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TVM/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicketVendingMacine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOEN6611-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/OPUSCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Pass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TVM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/EncryptionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/FareService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/PaymentGateway.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/TokenizationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/TransactionLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Enums.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="46" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "RayaneDescartes"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/EileenFu/SOEN6611-Project.git",
+    "accountId": "939b8a75-f72e-4c4d-a91b-814701c263b9"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="33sfCmq9bz7flY4Tgu0KNfhGxvR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TVM.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "TVM.java",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="application.controllers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TVM" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="SOEN6611-Project" />
+      <option name="PROGRAM_PARAMETERS" value="$Classpath$$MODULE_DIR$" />
+      <option name="VM_PARAMETERS" value="   --module-path &quot;C:\Users\Asus\Downloads\openjfx-25_windows-x64_bin-sdk\javafx-sdk-25\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.25908.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-256f9dae541f-JavaScript-IU-253.25908.13" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="" />
+      <created>1760110574839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760110574839</updated>
+      <workItem from="1760110575985" duration="2444000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
