@@ -4,50 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/.idea/libraries/javafx_fxml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/TVM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/build.fxbuild" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/Images/iGo_Loading_img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/Images/iGo_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/application/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/application/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/application/controllers/HomeScreenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/application/controllers/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/application/controllers/StartupController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/HomeScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/Login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/StartupScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/fxml/signup.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TVM/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicketVendingMacine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOEN6611-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/OPUSCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Pass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/TVM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Ticket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/EncryptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/FareService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/PaymentGateway.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/TokenizationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/TransactionLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Enums.java" beforeDir="false" />
+    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="cleaned up directory, moved models and services folders into the src folder.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Data/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fxml/MainScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SOEN6611-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SOEN6611-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/SignupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +28,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="46" />
+    <option name="cachedIndexableFilesCount" value="52" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -91,8 +66,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.TVM.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "TVM.java",
@@ -139,11 +119,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1760110574839</updated>
-      <workItem from="1760110575985" duration="2444000" />
+      <workItem from="1760110575985" duration="8711000" />
     </task>
+    <task id="LOCAL-00001" summary="cleaned up directory, moved models and services folders into the src folder.">
+      <option name="closed" value="true" />
+      <created>1760113124511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760113124511</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cleaned up directory, moved models and services folders into the src folder.">
+      <option name="closed" value="true" />
+      <created>1760113303334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760113303334</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cleaned up directory, moved models and services folders into the src folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up directory, moved models and services folders into the src folder." />
   </component>
 </project>

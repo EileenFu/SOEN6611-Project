@@ -36,7 +36,7 @@
         <HBox spacing="10" maxWidth="Infinity">
             <Button text="Back" onAction="#goBack"/>
             <Region HBox.hgrow="ALWAYS"/>
-            <Button text="Sign Up"/>
+            <Button text="Sign Up" onAction="#signup"/>
         </HBox>
 
     </VBox>

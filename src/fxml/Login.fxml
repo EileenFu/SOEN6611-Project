@@ -34,13 +34,13 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Username:">
+                  <Label text="Email:">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="265.0" promptText="Username Here.." GridPane.columnIndex="1" />
-                  <PasswordField minWidth="-Infinity" prefHeight="26.0" prefWidth="199.0" promptText="Password Here.." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="emailField" prefHeight="26.0" prefWidth="265.0" promptText="Your email Here.." GridPane.columnIndex="1" />
+                  <PasswordField fx:id="passwordField" minWidth="-Infinity" prefHeight="26.0" prefWidth="199.0" promptText="Password Here.." GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label text="Password:" GridPane.rowIndex="1">
                      <font>
                         <Font size="20.0" />
