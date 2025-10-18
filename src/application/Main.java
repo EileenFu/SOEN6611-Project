@@ -33,11 +33,11 @@ public class Main extends Application {
 	        delay.setOnFinished(event -> {
 	            try {
 	                // Load main window
-	                Parent mainRoot = FXMLLoader.load(getClass().getResource("/fxml/HomeScreen.fxml"));
+	                Parent mainRoot = FXMLLoader.load(getClass().getResource("/fxml/MainScreen.fxml"));
 	                
 	                stage.setScene(new Scene(mainRoot));
 	                stage.setTitle("Welcome!");
-	                stage.setResizable(true);
+					stage.setFullScreen(true);
 	                stage.show();
 	            } catch (Exception e) {
 	                e.printStackTrace();

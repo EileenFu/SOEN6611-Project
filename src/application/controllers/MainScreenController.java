@@ -1,25 +1,57 @@
 package application.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import model.User;
+import javafx.stage.Stage;
+import static application.controllers.NavigationUtil.switchScene;
+import java.io.IOException;
 
 public class MainScreenController {
 
     @FXML
-    private Label welcomeLabel; // Add this to your FXML
+    private Label welcomeLabel;
 
-    private User currentUser;
+    @FXML
+    public void handleBuySingleTicket(ActionEvent event) {
+        navigateToZoneType(event, "BUY_SINGLE_TICKET");
+    }
 
-    // Call this method from LoginController after successful login
-    public void setUserData(User user) {
-        this.currentUser = user;
+    @FXML
+    public void handleBuyMultipleTickets(ActionEvent event) {
+        navigateToZoneType(event, "BUY_MULTIPLE_TICKETS");
+    }
 
-        // Display user's name
-        String fullName = user.getFirstName() + " " + user.getLastName();
-        welcomeLabel.setText("Welcome, " + fullName + "!");
+    @FXML
+    public void handleRechargeOpusCard(ActionEvent event) {switchScene(event, "/fxml/OpusCardScreen.fxml");}
 
-        // You can now access all user data:
-        System.out.println("Current user email: " + user.getEmail());
+    @FXML
+    public void handleBuyUnlimitedPass(ActionEvent event) {
+        switchScene(event, "/fxml/UnlimitedPassScreen.fxml");;
+    }
+
+    /**
+     * Navigate to Zone Type selection screen with action context
+     */
+    private void navigateToZoneType(ActionEvent event, String action) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ZoneTypeScreen.fxml"));
+            Parent zoneTypeScreen = loader.load();
+
+            // Get the controller and pass the action
+            ZoneTypeController controller = loader.getController();
+            controller.setPreviousAction(action);
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(zoneTypeScreen);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -4,13 +4,13 @@ import utils.Enums.ZoneType;
 
 public class Ticket extends Product {
 
-    private final int trips; // number of trips for this ticket (1, 2, 10)
-
+    private final int trips;
     // Constructor
     public Ticket(ZoneType zone, int trips, boolean printed) {
         super(zone, printed);
         this.trips = trips;
     }
+
 
     public int getTrips() {
         return trips;

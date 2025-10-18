@@ -28,6 +28,7 @@ public class FareService {
     private final Map<String, Fare> passFares = new HashMap<>();
 
     // Constructor
+    // Constructor
     public FareService() {
         // Ticket fares
         ticketFares.put("A_1", new Fare(3.75, 2.75));
@@ -49,26 +50,41 @@ public class FareService {
         // Special case: 6-13 Group Ticket
         ticketFares.put("A_GROUP", new Fare(21.25, 21.25));
 
-        // Pass fares
+        // Pass fares - Zone A (all durations)
         passFares.put("A_DAY", new Fare(11.25, 11.25));
         passFares.put("A_THREEDAY", new Fare(21.75, 21.75));
         passFares.put("A_WEEK", new Fare(32.00, 19.25));
         passFares.put("A_MONTH", new Fare(104.50, 62.75));
         passFares.put("A_NIGHT", new Fare(6.50, 6.50));
         passFares.put("A_WEEKEND", new Fare(16.75, 16.75));
-        passFares.put("A_4MONTH", new Fare(240.00, 240.00));
+        passFares.put("A_FOURMONTH", new Fare(240.00, 240.00));
 
+        // Pass fares - Zone AB
         passFares.put("AB_DAY", new Fare(13.75, 13.75));
         passFares.put("AB_THREEDAY", new Fare(29.25, 29.25));
+        passFares.put("AB_WEEK", new Fare(38.00, 22.75));
         passFares.put("AB_MONTH", new Fare(164.50, 98.75));
+        passFares.put("AB_NIGHT", new Fare(6.50, 6.50));
+        passFares.put("AB_WEEKEND", new Fare(19.75, 19.75));
+        passFares.put("AB_FOURMONTH", new Fare(300.00, 300.00));
 
+        // Pass fares - Zone ABC
         passFares.put("ABC_DAY", new Fare(17.75, 17.75));
         passFares.put("ABC_THREEDAY", new Fare(41.25, 41.25));
+        passFares.put("ABC_WEEK", new Fare(46.00, 27.50));
         passFares.put("ABC_MONTH", new Fare(200.50, 120.25));
+        passFares.put("ABC_NIGHT", new Fare(6.50, 6.50));
+        passFares.put("ABC_WEEKEND", new Fare(23.75, 23.75));
+        passFares.put("ABC_FOURMONTH", new Fare(375.00, 375.00));
 
+        // Pass fares - Zone ABCD
         passFares.put("ABCD_DAY", new Fare(22.75, 22.75));
         passFares.put("ABCD_THREEDAY", new Fare(56.25, 56.25));
+        passFares.put("ABCD_WEEK", new Fare(56.00, 33.50));
         passFares.put("ABCD_MONTH", new Fare(275.50, 165.25));
+        passFares.put("ABCD_NIGHT", new Fare(6.50, 6.50));
+        passFares.put("ABCD_WEEKEND", new Fare(29.75, 29.75));
+        passFares.put("ABCD_FOURMONTH", new Fare(480.00, 480.00));
     }
 
     // Get ticket fare for zone + trips

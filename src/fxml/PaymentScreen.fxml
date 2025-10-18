@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.controllers.PaymentController"
+      spacing="20" alignment="CENTER" styleClass="main-container"
+      prefWidth="600" prefHeight="500">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Payment" styleClass="title-label">
+        <font>
+            <Font name="System Bold" size="28"/>
+        </font>
+    </Label>
+
+    <VBox spacing="15" alignment="CENTER" styleClass="info-box">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Total Amount:" styleClass="info-label">
+                <font><Font size="16"/></font>
+            </Label>
+            <Label fx:id="totalAmountLabel" text="\$0.00" styleClass="info-value">
+                <font><Font name="System Bold" size="18"/></font>
+            </Label>
+        </HBox>
+
+        <Separator/>
+
+        <Label text="Select Payment Method" styleClass="section-label">
+            <font><Font name="System Bold" size="16"/></font>
+        </Label>
+
+        <VBox spacing="10">
+            <RadioButton fx:id="creditCardRadio" text="Credit Card" selected="true">
+                <toggleGroup>
+                    <ToggleGroup fx:id="paymentMethodGroup"/>
+                </toggleGroup>
+                <font><Font size="14"/></font>
+            </RadioButton>
+            <RadioButton fx:id="debitCardRadio" text="Debit Card" toggleGroup="$paymentMethodGroup">
+                <font><Font size="14"/></font>
+            </RadioButton>
+            <RadioButton fx:id="mobilePayRadio" text="Mobile Payment" toggleGroup="$paymentMethodGroup">
+                <font><Font size="14"/></font>
+            </RadioButton>
+        </VBox>
+
+        <Separator/>
+
+        <VBox spacing="10" fx:id="cardDetailsBox">
+            <Label text="Card Details" styleClass="section-label">
+                <font><Font name="System Bold" size="14"/></font>
+            </Label>
+            <TextField fx:id="cardNumberField" promptText="Card Number (16 digits)">
+                <font><Font size="14"/></font>
+            </TextField>
+            <HBox spacing="10">
+                <TextField fx:id="expiryField" promptText="MM/YY" HBox.hgrow="ALWAYS">
+                    <font><Font size="14"/></font>
+                </TextField>
+                <TextField fx:id="cvvField" promptText="CVV" prefWidth="100">
+                    <font><Font size="14"/></font>
+                </TextField>
+            </HBox>
+        </VBox>
+
+        <Label fx:id="statusLabel" text="" visible="false" styleClass="status-label">
+            <font><Font size="14"/></font>
+        </Label>
+    </VBox>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Process Payment" onAction="#handleProcessPayment" styleClass="primary-button">
+            <font><Font size="14"/></font>
+        </Button>
+        <Button text="Cancel" onAction="#handleCancel" styleClass="secondary-button">
+            <font><Font size="14"/></font>
+        </Button>
+    </HBox>
+</VBox>

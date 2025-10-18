@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.controllers.PaymentConfirmationController"
+      spacing="20" alignment="CENTER" styleClass="main-container"
+      prefWidth="600" prefHeight="500">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <VBox fx:id="successBox" spacing="20" alignment="CENTER" visible="false" managed="false">
+        <Label text="✓" styleClass="success-icon" textFill="green">
+            <font><Font name="System Bold" size="60"/></font>
+        </Label>
+        <Label text="Payment Successful!" styleClass="title-label" textFill="green">
+            <font><Font name="System Bold" size="28"/></font>
+        </Label>
+
+        <VBox spacing="10" alignment="CENTER" styleClass="info-box">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+            <Label fx:id="transactionIdLabel" text="Transaction ID: XXX">
+                <font><Font size="14"/></font>
+            </Label>
+            <Label fx:id="amountLabel" text="Amount: $0.00">
+                <font><Font size="14"/></font>
+            </Label>
+            <Label fx:id="ticketInfoLabel" text="Ticket Information">
+                <font><Font size="14"/></font>
+            </Label>
+            <Separator/>
+            <Label text="Your ticket has been issued!" styleClass="success-message">
+                <font><Font name="System Bold" size="16"/></font>
+            </Label>
+        </VBox>
+
+        <Button text="Print Ticket" onAction="#handlePrintTicket" styleClass="primary-button">
+            <font><Font size="14"/></font>
+        </Button>
+        <Button text="Done" onAction="#handleDone" styleClass="secondary-button">
+            <font><Font size="14"/></font>
+        </Button>
+    </VBox>
+
+    <VBox fx:id="failureBox" spacing="20" alignment="CENTER" visible="false" managed="false">
+        <Label text="✗" styleClass="error-icon" textFill="red">
+            <font><Font name="System Bold" size="60"/></font>
+        </Label>
+        <Label text="Payment Failed!" styleClass="title-label" textFill="red">
+            <font><Font name="System Bold" size="28"/></font>
+        </Label>
+
+        <VBox spacing="10" alignment="CENTER" styleClass="info-box">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+            <Label fx:id="errorMessageLabel" text="Payment could not be processed" wrapText="true" textAlignment="CENTER">
+                <font><Font size="14"/></font>
+            </Label>
+            <Label fx:id="failedTransactionIdLabel" text="Transaction ID: XXX">
+                <font><Font size="12"/></font>
+            </Label>
+        </VBox>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Request Refund" onAction="#handleRefund" styleClass="primary-button">
+                <font><Font size="14"/></font>
+            </Button>
+            <Button text="Try Again" onAction="#handleRetry" styleClass="secondary-button">
+                <font><Font size="14"/></font>
+            </Button>
+            <Button text="Cancel" onAction="#handleCancel" styleClass="secondary-button">
+                <font><Font size="14"/></font>
+            </Button>
+        </HBox>
+    </VBox>
+</VBox>
