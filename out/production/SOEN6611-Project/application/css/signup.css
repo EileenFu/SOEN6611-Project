@@ -1,0 +1,143 @@
+
+/* signup.css - Fixed version without loops */
+
+/* StackPane Background */
+.stack-pane {
+    -fx-background-color: linear-gradient(to bottom right, #E3F2FD, #F5F5F5);
+}
+
+/* Main Form Container (VBox) */
+.form-container {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 40;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 20, 0, 0, 5);
+    -fx-border-color: transparent;
+    -fx-border-radius: 15;
+}
+
+/* Page Title */
+.page-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4A90E2;
+    -fx-padding: 0 0 20 0;
+}
+
+/* Text Fields and Password Fields */
+.text-field, .password-field {
+    -fx-font-size: 14px;
+    -fx-padding: 12 15;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: #333333;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4A90E2;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(74, 144, 226, 0.3), 8, 0, 0, 0);
+}
+
+.text-field:hover, .password-field:hover {
+    -fx-border-color: #6BA3E8;
+}
+
+/* Date Picker */
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.date-picker:focused {
+    -fx-border-color: #4A90E2;
+    -fx-border-width: 2;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow {
+    -fx-background-color: #4A90E2;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #6C757D;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #5A6268;
+    -fx-scale-y: 1.05;
+    -fx-scale-x: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: #545B62;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 1);
+}
+
+/* Primary Button (Sign Up) - Target the second button */
+.button:default {
+    -fx-background-color: #4A90E2;
+}
+
+.button:default:hover {
+    -fx-background-color: #357ABD;
+}
+
+.button:default:pressed {
+    -fx-background-color: #357ABD;
+}
+
+/* Prompt Text */
+.text-field, .password-field {
+    -fx-prompt-text-fill: #999999;
+}
+
+/* HBox and VBox */
+.h-box {
+    -fx-spacing: 10;
+}
+
+.v-box {
+    -fx-spacing: 15;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Error State */
+.text-field.error, .password-field.error, .date-picker.error {
+    -fx-border-color: #D9534F;
+    -fx-border-width: 2;
+}
+
+/* Success State */
+.text-field.success, .password-field.success, .date-picker.success {
+    -fx-border-color: #5CB85C;
+    -fx-border-width: 2;
+}
