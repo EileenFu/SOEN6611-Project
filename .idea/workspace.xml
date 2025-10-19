@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="added CSS Styling">
-      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/BuyMultipleTicketsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/PaymentConfirmationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/TicketSummaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/UnlimitedPassController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/controllers/ZoneTypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/MultipleTicketsScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/PaymentConfirmationScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/PaymentScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/UnlimitedPassScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/HomeScreenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/MainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/MainScreenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/SignupController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/HomeScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/Login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/MainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/MainScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/signup.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/model/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/model/Ticket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/services/FareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/services/FareService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/utils/Enums$PaymentMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/utils/Enums$PaymentMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/HomeScreenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/SignupController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/HomeScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/MainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/MainScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/signup.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/FareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/FareService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Enums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Enums.java" afterDir="false" />
-    </list>
+    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="Full Implementation of software, possible functionality fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +108,7 @@
       <workItem from="1760110575985" duration="9103000" />
       <workItem from="1760126654606" duration="6869000" />
       <workItem from="1760664457781" duration="14128000" />
-      <workItem from="1760733973911" duration="15964000" />
+      <workItem from="1760733973911" duration="16839000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up directory, moved models and services folders into the src folder.">
       <option name="closed" value="true" />
@@ -205,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760129452156</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Full Implementation of software, possible functionality fix">
+      <option name="closed" value="true" />
+      <created>1760807184887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1760807184887</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +184,7 @@
     <MESSAGE value="cleaned up directory, moved models and services folders into the src folder." />
     <MESSAGE value="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data." />
     <MESSAGE value="added CSS Styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CSS Styling" />
+    <MESSAGE value="Full Implementation of software, possible functionality fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Implementation of software, possible functionality fix" />
   </component>
 </project>
