@@ -5,6 +5,10 @@ package services;
 // ----------------------
 public class TokenizationService {
     public String tokenize(String cardNumber) {
+        if (cardNumber.equals("4111222233334444")) {
+            // A fixed token for the default card
+            return "TOKEN-1A2B-3C4D-5E6F-DEFAULT";
+        }
         return "TOKENIZED(" + cardNumber + ")";
 
     }

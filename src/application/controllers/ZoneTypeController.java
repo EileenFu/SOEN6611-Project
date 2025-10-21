@@ -12,7 +12,7 @@ import utils.Enums;
 
 import java.io.IOException;
 
-import static application.controllers.NavigationUtil.switchScene;
+import static application.controllers.NavigationUtil.*;
 import static utils.Enums.ZoneType.*;
 
 public class ZoneTypeController {
@@ -139,7 +139,7 @@ public class ZoneTypeController {
                 navigateToPassSummary(event, ABCD);
                 break;
             case "RECHARGE_OPUS_CARD":
-                switchScene(event, "/fxml/OpusCardScreen.fxml");
+                switchScene("Recharge Opus Card",event, "/fxml/OpusCardScreen.fxml");
                 break;
             case "ADD_TICKET_TO_OPUS":
                 navigateToQuantitySelection(event, "ABCD");
@@ -156,7 +156,7 @@ public class ZoneTypeController {
             if (selectedPassDuration == null) {
                 System.err.println("Error: selectedPassDuration is null!");
                 System.err.println("Cannot calculate pass fare. Returning to main screen.");
-                switchScene(event, "/fxml/MainScreen.fxml");
+                switchScene("Main screen" ,event, "/fxml/MainScreen.fxml");
                 return;
             }
 
@@ -173,6 +173,8 @@ public class ZoneTypeController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(newScreen);
             stage.setScene(scene);
+            stage.setResizable(true);
+            stage.centerOnScreen();
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading Ticket Summary Screen");
@@ -183,7 +185,7 @@ public class ZoneTypeController {
     @FXML
     public void handleBack(ActionEvent event) {
         // No validation needed - just navigate back to main screen
-        switchScene(event, "/fxml/MainScreen.fxml");
+        switchScene("Main Screen", event, "/fxml/MainScreen.fxml");
     }
 
     /**

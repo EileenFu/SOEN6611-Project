@@ -115,7 +115,7 @@ public class PaymentConfirmationController {
      */
     @FXML
     public void handleDone(ActionEvent event) {
-        switchScene(event, "/fxml/MainScreen.fxml");
+        switchScene("Main Screen", event, "/fxml/MainScreen.fxml");
     }
 
     /**
@@ -142,7 +142,7 @@ public class PaymentConfirmationController {
      */
     @FXML
     public void handleRetry(ActionEvent event) {
-        switchScene(event, "/fxml/TicketSummaryScreen.fxml");
+        switchScene("Ticket Summary", event, "/fxml/TicketSummaryScreen.fxml");
     }
 
     /**
@@ -150,6 +150,6 @@ public class PaymentConfirmationController {
      */
     @FXML
     public void handleCancel(ActionEvent event) {
-        switchScene(event, "/fxml/MainScreen.fxml");
+        switchScene("iGo", event, "/fxml/MainScreen.fxml");
     }
 }

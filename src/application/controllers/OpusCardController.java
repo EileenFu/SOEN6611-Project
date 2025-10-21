@@ -150,7 +150,7 @@ public class OpusCardController {
      */
     @FXML
     public void handleBack(ActionEvent event) {
-        switchScene(event, "/fxml/MainScreen.fxml");
+        switchScene("", event, "/fxml/MainScreen.fxml");
     }
 
 

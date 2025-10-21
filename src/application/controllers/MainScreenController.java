@@ -27,11 +27,11 @@ public class MainScreenController {
     }
 
     @FXML
-    public void handleRechargeOpusCard(ActionEvent event) {switchScene(event, "/fxml/OpusCardScreen.fxml");}
+    public void handleRechargeOpusCard(ActionEvent event) {switchScene("Recharge Opus Card",event, "/fxml/OpusCardScreen.fxml");}
 
     @FXML
     public void handleBuyUnlimitedPass(ActionEvent event) {
-        switchScene(event, "/fxml/UnlimitedPassScreen.fxml");;
+        switchScene("Buy Unlimited Pass", event, "/fxml/UnlimitedPassScreen.fxml");;
     }
 
     /**
@@ -48,6 +48,9 @@ public class MainScreenController {
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(zoneTypeScreen);
+            stage.centerOnScreen();
+            stage.setResizable(true);
+            stage.setTitle("Select Zone Type");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

@@ -98,6 +98,6 @@ public class UnlimitedPassController {
      */
     @FXML
     public void handleCancel(ActionEvent event) {
-        NavigationUtil.switchScene(event, "/fxml/MainScreen.fxml");
+        NavigationUtil.switchScene("Main Screen",event, "/fxml/MainScreen.fxml");
     }
 }

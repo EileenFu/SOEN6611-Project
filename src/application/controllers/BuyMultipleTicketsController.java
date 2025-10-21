@@ -44,7 +44,7 @@ public class BuyMultipleTicketsController {
 
     @FXML
     public void handleCancel(ActionEvent event) {
-        switchScene(event, "/fxml/MainScreen.fxml");
+        switchScene("", event, "/fxml/MainScreen.fxml");
     }
 
     /**

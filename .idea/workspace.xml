@@ -4,14 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="Full Implementation of software, possible functionality fix" />
+    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="Full Implementation of software, possible functionality fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/MainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/MainScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/NavigationUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/NavigationUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentConfirmationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentConfirmationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/TicketSummaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/TicketSummaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/ZoneTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/ZoneTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/MultipleTicketsScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/MultipleTicketsScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/OpusCardScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/OpusCardScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/PaymentScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/PaymentScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/TicketSummaryScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/TicketSummaryScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/ZoneTypeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/ZoneTypeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/utils/Enums$PaymentMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/utils/Enums$PaymentMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/BuyMultipleTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/BuyMultipleTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/NavigationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/NavigationUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/OpusCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/OpusCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/PaymentConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/PaymentConfirmationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/TicketSummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/TicketSummaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/UnlimitedPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/UnlimitedPassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/controllers/ZoneTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/ZoneTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/MultipleTicketsScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/MultipleTicketsScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/OpusCardScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/OpusCardScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/PaymentScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/PaymentScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/TicketSummaryScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/TicketSummaryScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/ZoneTypeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/ZoneTypeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/TokenizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/TokenizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Enums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Enums.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="64" />
+    <option name="cachedIndexableFilesCount" value="65" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -108,7 +138,9 @@
       <workItem from="1760110575985" duration="9103000" />
       <workItem from="1760126654606" duration="6869000" />
       <workItem from="1760664457781" duration="14128000" />
-      <workItem from="1760733973911" duration="16839000" />
+      <workItem from="1760733973911" duration="19930000" />
+      <workItem from="1760894846964" duration="4533000" />
+      <workItem from="1761062079596" duration="13298000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up directory, moved models and services folders into the src folder.">
       <option name="closed" value="true" />
@@ -174,7 +206,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760807184887</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Full Implementation of software, possible functionality fix">
+      <option name="closed" value="true" />
+      <created>1760840074220</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1760840074220</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Full Implementation of software, possible functionality fix">
+      <option name="closed" value="true" />
+      <created>1760840185506</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1760840185506</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

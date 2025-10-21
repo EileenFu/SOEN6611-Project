@@ -43,8 +43,6 @@ public class TicketSummaryController {
     private String zone;
     private int quantity = 1;
     private double ticketPrice;
-    private double subtotal;
-    private double tax;
     private double total;
 
     /**
@@ -110,14 +108,12 @@ public class TicketSummaryController {
         // Set zone
         zoneLabel.setText(zone);
 
-        // Calculate totals
-        subtotal = passPrice;
-        tax = subtotal * 0.13; // 13% tax
-        total = subtotal + tax;
+        // Calculate total (taxes already included in fare)
+        total = passPrice;
 
         // Update price labels
         ticketPriceLabel.setText(String.format("$%.2f", passPrice));
-        totalLabel.setText(String.format("$%.2f", total));
+        totalLabel.setText(String.format("$%.2f (taxes included)", total));
 
         // Update validity message for passes
         updatePassValidityMessage(passDuration);
@@ -191,14 +187,12 @@ public class TicketSummaryController {
         // Set quantity
         quantityLabel.setText(String.valueOf(quantity));
 
-        // Calculate totals
-        subtotal = ticketPrice * quantity;
-        tax = subtotal * 0.13; // 13% tax
-        total = subtotal + tax;
+        // Calculate total (taxes already included in fare)
+        total = ticketPrice * quantity;
 
         // Update price labels
         ticketPriceLabel.setText(String.format("$%.2f", ticketPrice));
-        totalLabel.setText(String.format("$%.2f", total));
+        totalLabel.setText(String.format("$%.2f (taxes included)", total));
 
         // Update validity message
         updateValidityMessage();
@@ -217,14 +211,12 @@ public class TicketSummaryController {
         // Set quantity
         quantityLabel.setText(String.valueOf(quantity));
 
-        // Calculate totals using the provided ticket price
-        subtotal = ticketPrice * quantity;
-        tax = subtotal * 0.13; // 13% tax
-        total = subtotal + tax;
+        // Calculate total (taxes already included in fare)
+        total = ticketPrice * quantity;
 
         // Update price labels
         ticketPriceLabel.setText(String.format("$%.2f", ticketPrice));
-        totalLabel.setText(String.format("$%.2f", total));
+        totalLabel.setText(String.format("$%.2f (taxes included)", total));
 
         // Update validity message
         updateValidityMessage();
@@ -294,26 +286,18 @@ public class TicketSummaryController {
     @FXML
     public void handleCancel(ActionEvent event) {
         // Go back to main screen
-        switchScene(event, "/fxml/MainScreen.fxml");
+        switchScene("Main Screen", event, "/fxml/MainScreen.fxml");
     }
 
     @FXML
     public void handleBack(ActionEvent event) {
         // Go back to zone selection
-        switchScene(event, "/fxml/ZoneTypeScreen.fxml");
+        switchScene("Zone Type", event, "/fxml/ZoneTypeScreen.fxml");
     }
 
     /**
      * Get stored price values
      */
-    public double getSubtotal() {
-        return subtotal;
-    }
-
-    public double getTax() {
-        return tax;
-    }
-
     public double getTotal() {
         return total;
     }

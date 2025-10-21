@@ -1,3 +1,4 @@
+
 package application.controllers;
 
 import javafx.event.ActionEvent;
@@ -7,6 +8,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import services.PaymentGateway;
@@ -17,25 +20,41 @@ import utils.Enums.TransactionStatus;
 import java.io.IOException;
 import java.util.UUID;
 
+import static application.controllers.NavigationUtil.switchScene;
+
 public class PaymentController {
 
+
+
     @FXML private Label totalAmountLabel;
+    @FXML private RadioButton cashRadio;
     @FXML private RadioButton creditCardRadio;
     @FXML private RadioButton debitCardRadio;
-    @FXML private RadioButton mobilePayRadio;
+    @FXML private RadioButton nfcRadio;
+    @FXML private Button nfcButton;
     @FXML private ToggleGroup paymentMethodGroup;
     @FXML private VBox cardDetailsBox;
+    @FXML private VBox cashPaymentBox;
+    @FXML private Label cashInsertedLabel;
+    @FXML private HBox changeBox;
+    @FXML private Label changeLabel;
     @FXML private TextField cardNumberField;
     @FXML private TextField expiryField;
     @FXML private TextField cvvField;
     @FXML private Label statusLabel;
 
     private double totalAmount;
+    private double cashInserted = 0.0;
     private String ticketType;
     private String zone;
     private int quantity;
     private PaymentGateway paymentGateway;
     private TokenizationService tokenizationService;
+
+    //Fake card details for PC emulation
+    private static final String DEFAULT_CARD_NUMBER = "4111222233334444";
+    private static final String DEFAULT_EXPIRY = "12/26";
+    private static final String DEFAULT_CVV = "123";
 
     public PaymentController() {
         this.paymentGateway = new PaymentGateway();
@@ -49,16 +68,37 @@ public class PaymentController {
     public void initialize() {
         // Listen for payment method changes
         paymentMethodGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue == mobilePayRadio) {
-                // Show mobile payment fields
-                cardNumberField.setPromptText("Phone Number");
-                expiryField.setVisible(false);
-                cvvField.setVisible(false);
-            } else {
-                // Show card payment fields
-                cardNumberField.setPromptText("Card Number");
-                expiryField.setVisible(true);
-                cvvField.setVisible(true);
+            if (newValue == cashRadio) {
+                cardDetailsBox.setVisible(false);
+                cardDetailsBox.setManaged(false);
+                cashPaymentBox.setVisible(true);
+                cashPaymentBox.setManaged(true);
+                changeBox.setVisible(false);
+                changeBox.setManaged(false);
+                nfcButton.setVisible(false);
+                nfcButton.setManaged(false);
+            }
+
+            else if (newValue == nfcRadio) {
+                cardDetailsBox.setVisible(false);
+                cardDetailsBox.setManaged(false);
+                cashPaymentBox.setVisible(false);
+                cashPaymentBox.setManaged(false);
+                changeBox.setVisible(false);
+                changeBox.setManaged(false);
+                nfcButton.setVisible(true);
+                nfcButton.setManaged(true);
+
+            }
+            else {
+                cardDetailsBox.setVisible(true);
+                cardDetailsBox.setManaged(true);
+                cashPaymentBox.setVisible(false);
+                cashPaymentBox.setManaged(false);
+                changeBox.setVisible(false);
+                changeBox.setManaged(false);
+                nfcButton.setVisible(false);
+                nfcButton.setManaged(false);
             }
         });
     }
@@ -71,41 +111,97 @@ public class PaymentController {
         this.ticketType = ticketType;
         this.zone = zone;
         this.quantity = quantity;
+        this.cashInserted = 0.0;
 
-        totalAmountLabel.setText(String.format("$%.2f", amount));
+        if (totalAmountLabel != null) {
+            totalAmountLabel.setText(String.format("$%.2f", amount));
+        }
+        updateCashDisplay();
+    }
 
-        System.out.println("Payment screen initialized:");
-        System.out.println("Amount: $" + amount);
-        System.out.println("Type: " + ticketType);
-        System.out.println("Zone: " + zone);
+    /**
+     * Handle cash insertion
+     */
+    @FXML
+    public void handleCashInsert(ActionEvent event) {
+        Button source = (Button) event.getSource();
+        String id = source.getId();
+
+        double amount = 0.0;
+        switch (id) {
+            case "bill100": amount = 100.0; break;
+            case "bill50": amount = 50.0; break;
+            case "bill20": amount = 20.0; break;
+            case "bill10": amount = 10.0; break;
+            case "bill5": amount = 5.0; break;
+            case "coin2": amount = 2.0; break;
+            case "coin1": amount = 1.0; break;
+            case "coin025": amount = 0.25; break;
+            case "coin010": amount = 0.10; break;
+            case "coin005": amount = 0.05; break;
+        }
+
+        cashInserted += amount;
+        updateCashDisplay();
+
+        System.out.println("Cash inserted: $" + amount);
+        System.out.println("Total cash: $" + cashInserted);
+    }
+
+    /**
+     * Update cash display
+     */
+    private void updateCashDisplay() {
+        // Add null check to prevent NullPointerException
+        if (cashInsertedLabel == null) {
+            return;
+        }
+
+        cashInsertedLabel.setText(String.format("$%.2f", cashInserted));
+
+        // Check if enough cash is inserted
+        if (cashInserted >= totalAmount) {
+            double change = cashInserted - totalAmount;
+            if (changeLabel != null) {
+                changeLabel.setText(String.format("$%.2f", change));
+            }
+            if (changeBox != null) {
+                changeBox.setVisible(true);
+                changeBox.setManaged(true);
+            }
+        } else {
+            if (changeBox != null) {
+                changeBox.setVisible(false);
+                changeBox.setManaged(false);
+            }
+        }
     }
 
     /**
      * Validate card input
      */
     private boolean validateCardDetails() {
-        String cardNumber = cardNumberField.getText().trim();
-        String expiry = expiryField.getText().trim();
-        String cvv = cvvField.getText().trim();
+        String cardNumber = cardNumberField.getText().replaceAll("\\s+", "");
+        String expiry = expiryField.getText();
+        String cvv = cvvField.getText();
 
-        // Clear previous errors
-        statusLabel.setVisible(false);
-
-        // Validate card number (16 digits)
-        if (!cardNumber.matches("\\d{16}")) {
-            showError("Card number must be 16 digits");
+        if (cardNumber.isEmpty() || expiry.isEmpty() || cvv.isEmpty()) {
+            showError("Please fill in all card details");
             return false;
         }
 
-        // Validate expiry (MM/YY format)
-        if (!expiry.matches("(0[1-9]|1[0-2])/\\d{2}")) {
-            showError("Expiry must be in MM/YY format");
+        if (cardNumber.length() < 13 || cardNumber.length() > 19) {
+            showError("Invalid card number");
             return false;
         }
 
-        // Validate CVV (3-4 digits)
-        if (!cvv.matches("\\d{3,4}")) {
-            showError("CVV must be 3 or 4 digits");
+        if (!expiry.matches("\\d{2}/\\d{2}")) {
+            showError("Invalid expiry date format (MM/YY)");
+            return false;
+        }
+
+        if (cvv.length() < 3 || cvv.length() > 4) {
+            showError("Invalid CVV");
             return false;
         }
 
@@ -116,66 +212,98 @@ public class PaymentController {
      * Show error message
      */
     private void showError(String message) {
-        statusLabel.setText(message);
-        statusLabel.setStyle("-fx-text-fill: red;");
-        statusLabel.setVisible(true);
+        if (statusLabel != null) {
+            statusLabel.setText(message);
+            statusLabel.setVisible(true);
+        }
     }
 
     /**
      * Get selected payment method
      */
     private PaymentMethod getSelectedPaymentMethod() {
+        if (cashRadio.isSelected()) return PaymentMethod.CASH;
         if (creditCardRadio.isSelected()) return PaymentMethod.CREDIT_CARD;
         if (debitCardRadio.isSelected()) return PaymentMethod.DEBIT_CARD;
-        if (mobilePayRadio.isSelected()) return PaymentMethod.MOBILE_PAY;
+        if (nfcRadio.isSelected()) return PaymentMethod.CONTACTLESS;
         return PaymentMethod.CREDIT_CARD;
+    }
+
+    @FXML
+    public void handleNFCPayment(ActionEvent event) throws IOException {
+        PaymentMethod method = getSelectedPaymentMethod();
+        String transactionId;
+        TransactionStatus status;
+        try {
+            if (method == PaymentMethod.CONTACTLESS) {
+                transactionId = UUID.randomUUID().toString();
+                status = TransactionStatus.SUCCESS;
+                try {
+
+                } catch (Exception e) {
+                    showError("An unexpected error occurred during contactless payment.");
+                    status = TransactionStatus.FAILED;
+                    e.printStackTrace();
+                }
+                navigateToConfirmation(event,status, transactionId);
+            }
+        } catch (Exception e) {
+            showError("An unexpected error occurred during contactless payment.");
+            e.printStackTrace();
+        }
     }
 
     /**
      * Handle payment processing
      */
     @FXML
-    public void handleProcessPayment(ActionEvent event) {
-        // Get payment method
+    public void handleProcessPayment(ActionEvent event) throws IOException {
         PaymentMethod method = getSelectedPaymentMethod();
 
-        String token;
-
-        if (method == PaymentMethod.MOBILE_PAY) {
-            // For mobile payment, use phone number or wallet ID instead of card
-            String mobileIdentifier = cardNumberField.getText().trim();
-
-            // Validate mobile identifier (e.g., phone number)
-            if (!mobileIdentifier.matches("\\d{10,15}")) {
-                showError("Please enter a valid phone number (10-15 digits)");
+        // Validate based on payment method
+        if (method == PaymentMethod.CASH) {
+            if (cashInserted < totalAmount) {
+                showError(String.format("Insufficient cash. Please insert $%.2f more", totalAmount - cashInserted));
                 return;
             }
-
-            token = tokenizationService.tokenize(mobileIdentifier);
         } else {
-            // Validate card details for card payments
             if (!validateCardDetails()) {
                 return;
             }
-
-            // Tokenize card information
-            String cardNumber = cardNumberField.getText().trim();
-            token = tokenizationService.tokenize(cardNumber);
         }
 
-        // Generate transaction ID
-        String transactionId = UUID.randomUUID().toString();
+        // Hide error if showing
+        if (statusLabel != null) {
+            statusLabel.setVisible(false);
+        }
 
+        // Process payment
         System.out.println("Processing payment...");
         System.out.println("Method: " + method);
         System.out.println("Amount: $" + totalAmount);
-        System.out.println("Token: " + token);
-        System.out.println("Transaction ID: " + transactionId);
 
-        // Process payment through gateway
-        TransactionStatus status = paymentGateway.processPayment(totalAmount, method, token);
+        String transactionId;
+        TransactionStatus status;
 
-        // Navigate to confirmation screen
+        if (method == PaymentMethod.CASH) {
+            // Cash payment always succeeds
+            transactionId = UUID.randomUUID().toString();
+            status = TransactionStatus.SUCCESS;
+
+            double change = cashInserted - totalAmount;
+            System.out.println("Payment successful with cash!");
+            System.out.println("Change returned: $" + String.format("%.2f", change));
+        } else {
+            // Card payment processing
+            String cardNumber = cardNumberField.getText().replaceAll("\\s+", "");
+            String token = tokenizationService.tokenize(cardNumber);
+
+            status = paymentGateway.processPayment(totalAmount, method, token);
+            transactionId = UUID.randomUUID().toString();
+        }
+
+
+        // Navigate to confirmation
         navigateToConfirmation(event, status, transactionId);
     }
 
@@ -205,6 +333,8 @@ public class PaymentController {
      */
     @FXML
     public void handleCancel(ActionEvent event) {
-        NavigationUtil.switchScene(event, "/fxml/TicketSummaryScreen.fxml");
+        switchScene("Main Screen" ,event, "/fxml/MainScreen.fxml");
     }
+
+
 }
