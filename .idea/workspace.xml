@@ -4,35 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="Full Implementation of software, possible functionality fix">
+    <list default="true" id="558de26b-4724-48e6-b5f9-819b3edb0bb3" name="Changes" comment="screen sizes fixed, added nfc emulation functiuonality, cash payment functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/MainScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/MainScreenController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/NavigationUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/NavigationUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentConfirmationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentConfirmationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/PaymentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/TicketSummaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/TicketSummaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/ZoneTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/ZoneTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/OpusCardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/application/controllers/OpusCardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/MultipleTicketsScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/MultipleTicketsScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/OpusCardScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/OpusCardScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/PaymentScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/PaymentScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/TicketSummaryScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/TicketSummaryScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/ZoneTypeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/fxml/ZoneTypeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/services/FareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/services/FareService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SOEN6611-Project/utils/Enums$PaymentMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SOEN6611-Project/utils/Enums$PaymentMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/BuyMultipleTicketsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/BuyMultipleTicketsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/MainScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/NavigationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/NavigationUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/OpusCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/OpusCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/controllers/PaymentConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/PaymentConfirmationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/PaymentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/TicketSummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/TicketSummaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/UnlimitedPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/UnlimitedPassController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/controllers/ZoneTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/controllers/ZoneTypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml/MultipleTicketsScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/MultipleTicketsScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml/OpusCardScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/OpusCardScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/PaymentScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/PaymentScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml/TicketSummaryScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/TicketSummaryScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fxml/ZoneTypeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/ZoneTypeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/TokenizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/TokenizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/FareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/FareService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Enums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Enums.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,31 +72,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TVM.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TVM.java&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TVM.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "TVM.java",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="application.controllers" />
@@ -140,7 +136,11 @@
       <workItem from="1760664457781" duration="14128000" />
       <workItem from="1760733973911" duration="19930000" />
       <workItem from="1760894846964" duration="4533000" />
-      <workItem from="1761062079596" duration="13298000" />
+      <workItem from="1761062079596" duration="13957000" />
+      <workItem from="1761148573803" duration="1769000" />
+      <workItem from="1761150363263" duration="1573000" />
+      <workItem from="1761239371721" duration="3449000" />
+      <workItem from="1761254673138" duration="4854000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up directory, moved models and services folders into the src folder.">
       <option name="closed" value="true" />
@@ -222,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760840185506</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="screen sizes fixed, added nfc emulation functiuonality, cash payment functionality">
+      <option name="closed" value="true" />
+      <created>1761075582761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761075582761</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +241,7 @@
     <MESSAGE value="updated the files, Login and Signup buttons now work perfectly, added MainScreen.fxml and MainScreenController.java, added User in Model folder, User Manager for handling User Data." />
     <MESSAGE value="added CSS Styling" />
     <MESSAGE value="Full Implementation of software, possible functionality fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full Implementation of software, possible functionality fix" />
+    <MESSAGE value="screen sizes fixed, added nfc emulation functiuonality, cash payment functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="screen sizes fixed, added nfc emulation functiuonality, cash payment functionality" />
   </component>
 </project>

@@ -84,6 +84,8 @@ public class UnlimitedPassController {
             controller.setPassDuration(duration);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setFullScreenExitHint("");
+            stage.setFullScreen(true);
             Scene scene = new Scene(newScreen);
             stage.setScene(scene);
             stage.show();

@@ -173,8 +173,9 @@ public class ZoneTypeController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(newScreen);
             stage.setScene(scene);
+            stage.setFullScreenExitHint("");
             stage.setResizable(true);
-            stage.centerOnScreen();
+            stage.setFullScreen(true);
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading Ticket Summary Screen");
@@ -202,8 +203,12 @@ public class ZoneTypeController {
             controller.initializeSummary(previousAction, zone, quantity, ticketPrice);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setFullScreenExitHint("");
+            stage.setResizable(true);
+            stage.setFullScreen(true);
             Scene scene = new Scene(newScreen);
             stage.setScene(scene);
+
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading Ticket Summary Screen");
@@ -225,7 +230,9 @@ public class ZoneTypeController {
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(newScreen);
+            stage.setFullScreenExitHint("");
             stage.setScene(scene);
+            stage.setFullScreen(true);
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading Multiple Tickets Screen");

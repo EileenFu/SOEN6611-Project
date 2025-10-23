@@ -37,7 +37,9 @@ public class Main extends Application {
 	                
 	                stage.setScene(new Scene(mainRoot));
 	                stage.setTitle("Welcome!");
-					stage.setFullScreen(true);
+					stage.setResizable(true);
+					stage.centerOnScreen();
+					stage.setMaximized(true);
 	                stage.show();
 	            } catch (Exception e) {
 	                e.printStackTrace();

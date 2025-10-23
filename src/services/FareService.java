@@ -28,7 +28,6 @@ public class FareService {
     private final Map<String, Fare> passFares = new HashMap<>();
 
     // Constructor
-    // Constructor
     public FareService() {
         // Ticket fares
         ticketFares.put("A_1", new Fare(3.75, 2.75));

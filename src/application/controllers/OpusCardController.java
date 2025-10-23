@@ -27,12 +27,6 @@ public class OpusCardController {
     private RadioButton regularCardRadio;
 
     @FXML
-    private RadioButton reducedFareCardRadio;
-
-    @FXML
-    private ToggleGroup cardTypeGroup;
-
-    @FXML
     private Label errorLabel;
 
     private OPUSCard opusCard;
@@ -113,6 +107,9 @@ public class OpusCardController {
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(newScreen);
+            stage.setFullScreenExitHint("");
+            stage.setResizable(true);
+            stage.setFullScreen(true);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
@@ -129,10 +126,6 @@ public class OpusCardController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/UnlimitedPassScreen.fxml"));
             Parent newScreen = loader.load();
-
-            // If you create PassSelectionController, initialize it here
-            // PassSelectionController controller = loader.getController();
-            // controller.setOpusCard(opusCard);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(newScreen);
@@ -153,11 +146,4 @@ public class OpusCardController {
         switchScene("", event, "/fxml/MainScreen.fxml");
     }
 
-
-    /**
-     * Get the created OPUS card (for passing between controllers)
-     */
-    public OPUSCard getOpusCard() {
-        return opusCard;
-    }
 }

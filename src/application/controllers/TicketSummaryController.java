@@ -275,6 +275,8 @@ public class TicketSummaryController {
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(newScreen);
+            stage.setFullScreenExitHint("");
+            stage.setFullScreen(true);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {

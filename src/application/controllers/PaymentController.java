@@ -51,11 +51,6 @@ public class PaymentController {
     private PaymentGateway paymentGateway;
     private TokenizationService tokenizationService;
 
-    //Fake card details for PC emulation
-    private static final String DEFAULT_CARD_NUMBER = "4111222233334444";
-    private static final String DEFAULT_EXPIRY = "12/26";
-    private static final String DEFAULT_CVV = "123";
-
     public PaymentController() {
         this.paymentGateway = new PaymentGateway();
         this.tokenizationService = new TokenizationService();
@@ -319,8 +314,12 @@ public class PaymentController {
             controller.initializeConfirmation(status, transactionId, totalAmount, ticketType, zone, quantity);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setFullScreenExitHint("");
             Scene scene = new Scene(newScreen);
             stage.setScene(scene);
+
+            stage.setFullScreen(true);
+
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading Payment Confirmation Screen");
