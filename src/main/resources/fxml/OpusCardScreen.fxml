@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.OpusCardController">
+
+    <!-- Top Navigation Bar -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #667eea; -fx-padding: 12;">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/iGo_icon.png" />
+                    </image>
+                </ImageView>
+
+                <Label text="iGo TVM System" textFill="white">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <Region HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Main Content Area with ScrollPane -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" pannable="true" style="-fx-background-color: #f5f5f5; -fx-background: #f5f5f5;">
+            <VBox alignment="TOP_CENTER" spacing="30" style="-fx-padding: 40;">
+                <children>
+                    <!-- Title with Icon -->
+                    <HBox alignment="CENTER" spacing="10">
+                        <Label text="💳" style="-fx-font-size: 32;" />
+                        <Label text="Recharge OPUS Card" textFill="#333333">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Label>
+                    </HBox>
+
+                    <!-- Card Information Section -->
+                    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30; -fx-border-color: #ddd; -fx-border-radius: 15; -fx-max-width: 500; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                        <children>
+                            <Label text="Enter OPUS Card Details" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #667eea;" />
+
+                            <!-- Card ID Input -->
+                            <VBox spacing="8">
+                                <Label text="OPUS Card Number" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" />
+                                <TextField fx:id="cardIdField" promptText="Enter 16-digit card number" style="-fx-font-size: 16; -fx-padding: 12; -fx-background-radius: 8; -fx-border-color: #ddd; -fx-border-radius: 8;" prefWidth="400.0" />
+                            </VBox>
+
+                            <!-- Card Type Selection -->
+                            <VBox spacing="10">
+                                <Label text="Card Type" style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" />
+                                <HBox spacing="30" alignment="CENTER_LEFT">
+                                    <RadioButton fx:id="regularCardRadio" text="Regular" selected="true" style="-fx-font-size: 14;">
+                                        <toggleGroup>
+                                            <ToggleGroup fx:id="cardTypeGroup" />
+                                        </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="reducedFareCardRadio" text="Reduced Fare" toggleGroup="$cardTypeGroup" style="-fx-font-size: 14;" />
+                                </HBox>
+                            </VBox>
+
+                            <!-- Error Message Label -->
+                            <Label fx:id="errorLabel" textFill="red" visible="false" wrapText="true" style="-fx-font-size: 13;">
+                                <padding>
+                                    <Insets top="10" />
+                                </padding>
+                            </Label>
+                        </children>
+                    </VBox>
+
+                    <!-- Recharge Options Section -->
+                    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 30; -fx-border-color: #ddd; -fx-border-radius: 15; -fx-max-width: 500; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                        <children>
+                            <Label text="What would you like to add?" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+                            <!-- Recharge Options -->
+                            <HBox spacing="20" alignment="CENTER">
+                                <Button fx:id="addTicketBtn" text="Add Ticket" onAction="#handleAddTicket" prefWidth="180" prefHeight="70" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 16; -fx-background-radius: 10; -fx-font-weight: bold;">
+                                    <graphic>
+                                        <Label text="🎫" style="-fx-font-size: 28;" />
+                                    </graphic>
+                                </Button>
+
+                                <Button fx:id="addPassBtn" text="Add Pass" onAction="#handleAddPass" prefWidth="180" prefHeight="70" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 16; -fx-background-radius: 10; -fx-font-weight: bold;">
+                                    <graphic>
+                                        <Label text="📋" style="-fx-font-size: 28;" />
+                                    </graphic>
+                                </Button>
+                            </HBox>
+
+                            <Label text="Select an option to continue" style="-fx-font-size: 12; -fx-text-fill: #888; -fx-font-style: italic;" />
+                        </children>
+                    </VBox>
+                </children>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <!-- Bottom Navigation -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #333; -fx-padding: 10;">
+            <children>
+                <Button text="Back to Main Menu" onAction="#handleBack" prefWidth="180" style="-fx-background-color: #e0e0e0; -fx-text-fill: #333; -fx-font-size: 14; -fx-padding: 12; -fx-background-radius: 8;" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

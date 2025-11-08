@@ -1,0 +1,106 @@
+/* homescreen.css */
+
+/* Main Container */
+.anchor-pane, .stack-pane, .border-pane, .v-box {
+    -fx-background-color: linear-gradient(to bottom right, #667EEA, #764BA2);
+}
+
+/* Alternative if you prefer a lighter theme */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #E3F2FD, #BBDEFB);
+}
+
+/* Welcome/Title Labels */
+.title-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+.subtitle-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #F0F0F0;
+    -fx-padding: 10 0 30 0;
+}
+
+/* Generic Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Buttons */
+.button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 40;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #4A90E2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 4);
+    -fx-min-width: 200px;
+}
+
+.button:hover {
+    -fx-background-color: #357ABD;
+    -fx-scale-y: 1.08;
+    -fx-scale-x: 1.08;
+}
+
+.button:pressed {
+    -fx-background-color: #2868A8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 0, 2);
+}
+
+/* Login Button */
+.button#login {
+    -fx-background-color: #5CB85C;
+}
+
+.button#login:hover {
+    -fx-background-color: #4CAE4C;
+}
+
+.button#login:pressed {
+    -fx-background-color: #449D44;
+}
+
+/* Sign Up Button */
+.button.signup-button {
+    -fx-background-color: #F0AD4E;
+}
+
+.button.signup-button:hover {
+    -fx-background-color: #EC971F;
+}
+
+.button.signup-button:pressed {
+    -fx-background-color: #D58512;
+}
+
+/* Card/Panel Styling (if you add containers) */
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 25, 0, 0, 10);
+}
+
+/* VBox Container for buttons */
+.v-box {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+/* HBox Container */
+.h-box {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+/* Image/Logo Styling */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 5);
+}

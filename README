@@ -1,0 +1,99 @@
+# SOEN6611-Project - Transit Ticket Vending Machine (TVM) System
+
+A JavaFX-based application simulating a transit ticket vending machine for purchasing OPUS cards, tickets, and unlimited passes.
+
+## Project Overview
+
+This application provides a user-friendly interface for:
+- Purchasing single and multiple transit tickets
+- Managing OPUS cards
+- Buying unlimited passes
+- Processing secure payments
+- Viewing transaction confirmations
+
+## Features
+
+- **Multiple Ticket Types**: Single tickets, multiple tickets, and unlimited passes
+- **Zone Selection**: Support for different fare zones
+- **OPUS Card Integration**: Load tickets onto OPUS cards
+- **Secure Payment Processing**: Includes encryption and tokenization services
+- **Transaction Logging**: Complete audit trail of all transactions
+- **Payment Gateway**: Mock payment processing with refund capability
+
+## Technology Stack
+
+- **Language**: Java 25
+- **UI Framework**: JavaFX
+- **Architecture**: MVC (Model-View-Controller)
+- **Build System**: IntelliJ IDEA project
+
+
+## Key Components
+
+### Controllers
+- `StartupController` - Initial screen
+- `MainScreenController` - Main menu navigation
+- `BuyMultipleTicketsController` - Multiple ticket purchase flow
+- `OpusCardController` - OPUS card management
+- `ZoneTypeController` - Zone selection
+- `PaymentController` - Payment processing
+- `PaymentConfirmationController` - Transaction confirmation
+
+### Models
+- `OPUSCard` - OPUS card representation
+- `Ticket` - Ticket model
+- `Pass` - Unlimited pass model
+- `Transaction` - Transaction records
+- `User` - User information
+
+### Services
+- `PaymentGateway` - Payment processing
+- `FareService` - Fare calculation
+- `EncryptionService` - Data encryption
+- `TokenizationService` - Payment tokenization
+- `TransactionLogger` - Transaction logging
+
+## Getting Started
+
+### Prerequisites
+
+- Java Development Kit (JDK) 25 or higher
+- JavaFX SDK
+- IntelliJ IDEA (recommended)
+
+### Running the Application
+
+1. Clone the repository
+2. Open the project in IntelliJ IDEA
+3. Ensure JavaFX libraries are properly configured
+4. Run the `Main` class located in `src/application/`
+
+## Usage
+
+1. **Start**: Launch the application from the startup screen
+2. **Select Ticket Type**: Choose from available options (single, multiple, unlimited pass)
+3. **Choose Zone**: Select your fare zone
+4. **Payment**: Enter payment details
+5. **Confirmation**: View transaction status and print ticket if successful
+
+## Development
+
+### Adding New Features
+
+- Controllers should extend JavaFX controller patterns
+- Use `NavigationUtil` for scene transitions
+- Implement services for business logic
+
+### User Data
+
+User information is stored in `Data/users.json`
+
+## License
+
+Academic project for SOEN6611 course.
+
+## Contributors
+
+RYANE HILMI
+EILEEN FU
+(put your names here)
