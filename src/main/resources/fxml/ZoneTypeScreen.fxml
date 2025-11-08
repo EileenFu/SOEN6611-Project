@@ -2,103 +2,30 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ZoneTypeController">
+<VBox fx:id="zoneTypeRoot" alignment="CENTER" spacing="40" style="-fx-padding: 40;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ZoneTypeController">
 
-    <!-- Top Navigation Bar -->
-    <top>
-        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #667eea; -fx-padding: 15;">
-            <children>
-                <!-- Logo -->
-                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../Images/iGo_icon.png" />
-                    </image>
-                </ImageView>
+    <Label text="Select Zone Type" textFill="#333333">
+        <font>
+            <Font name="System Bold" size="36.0"/>
+        </font>
+    </Label>
 
-                <!-- Title -->
-                <Label text="iGo TVM System" textFill="white">
-                    <font>
-                        <Font name="System Bold" size="24.0" />
-                    </font>
-                </Label>
+    <Label text="Choose the zone for your ticket" textFill="#666666">
+        <font>
+            <Font size="16.0"/>
+        </font>
+    </Label>
 
-                <!-- Spacer -->
-                <Region HBox.hgrow="ALWAYS" />
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+        <Button onAction="#handleZoneA" prefWidth="300" text="Zone A" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+        <Button onAction="#handleZoneAB" prefWidth="300" text="Zone AB" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+        <Button onAction="#handleZoneABC" prefWidth="300" text="Zone ABC" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+        <Button onAction="#handleZoneABCD" prefWidth="300" text="Zone ABCD" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    </VBox>
 
-                <!-- Back Button -->
-                <Button onAction="#handleBack" style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 8 20;" text="← Back" />
-            </children>
-        </HBox>
-    </top>
-
-    <!-- Main Content Area -->
-    <center>
-        <VBox alignment="CENTER" spacing="40" style="-fx-padding: 40;">
-            <children>
-                <!-- Main Heading -->
-                <Label text="Select Zone Type" textFill="#333333">
-                    <font>
-                        <Font name="System Bold" size="36.0" />
-                    </font>
-                </Label>
-
-                <!-- Subtitle -->
-                <Label text="Choose the zone for your single ticket" textFill="#666666">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Label>
-
-                <!-- Zone Options -->
-                <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
-                    <!-- Zone A -->
-                    <Button onAction="#handleZoneA" prefWidth="300" style="-fx-background-color: white; -fx-text-fill: #667eea; -fx-font-size: 24; -fx-font-weight: bold; -fx-padding: 25; -fx-border-color: #667eea; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;" text="Zone A">
-                        <font>
-                            <Font name="System Bold" size="24.0" />
-                        </font>
-                    </Button>
-
-                    <!-- Zone B -->
-                    <Button onAction="#handleZoneAB" prefWidth="300" style="-fx-background-color: white; -fx-text-fill: #667eea; -fx-font-size: 24; -fx-font-weight: bold; -fx-padding: 25; -fx-border-color: #667eea; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;" text="Zone AB">
-                        <font>
-                            <Font name="System Bold" size="24.0" />
-                        </font>
-                    </Button>
-
-                    <!-- Zone C -->
-                    <Button onAction="#handleZoneABC" prefWidth="300" style="-fx-background-color: white; -fx-text-fill: #667eea; -fx-font-size: 24; -fx-font-weight: bold; -fx-padding: 25; -fx-border-color: #667eea; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;" text="Zone ABC">
-                        <font>
-                            <Font name="System Bold" size="24.0" />
-                        </font>
-                    </Button>
-
-                    <!-- Zone D -->
-                    <Button onAction="#handleZoneABCD" prefWidth="300" style="-fx-background-color: white; -fx-text-fill: #667eea; -fx-font-size: 24; -fx-font-weight: bold; -fx-padding: 25; -fx-border-color: #667eea; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-cursor: hand;" text="Zone ABCD">
-                        <font>
-                            <Font name="System Bold" size="24.0" />
-                        </font>
-                    </Button>
-                </VBox>
-            </children>
-        </VBox>
-    </center>
-
-    <!-- Bottom Footer -->
-    <bottom>
-        <HBox alignment="CENTER" style="-fx-background-color: #333; -fx-padding: 15;">
-            <Label opacity="0.7" text="© 2025 iGo TVM System | All Rights Reserved" textFill="white">
-                <font>
-                    <Font size="12.0" />
-                </font>
-            </Label>
-        </HBox>
-    </bottom>
-</BorderPane>
+    <Button onAction="#handleBack" text="← Back" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 8;"/>
+</VBox>

@@ -1,15 +1,17 @@
 package application.controllers;
 
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.StackPane;
 import services.PaymentGateway;
 import utils.Enums.TransactionStatus;
 
-import static application.controllers.NavigationUtil.switchScene;
+
+import java.io.IOException;
 
 public class PaymentConfirmationController {
 
@@ -29,13 +31,17 @@ public class PaymentConfirmationController {
     private TransactionStatus status;
     private PaymentGateway paymentGateway;
 
+    // Reference to main container for dynamic navigation
+    private StackPane mainContainer;
+
     public PaymentConfirmationController() {
         this.paymentGateway = new PaymentGateway();
     }
 
-    /**
-     * Initialize confirmation screen with transaction results
-     */
+    public void setMainContainer(StackPane mainContainer) {
+        this.mainContainer = mainContainer;
+    }
+
     public void initializeConfirmation(TransactionStatus status, String transactionId,
                                        double amount, String ticketType, String zone, int quantity) {
         this.status = status;
@@ -52,9 +58,6 @@ public class PaymentConfirmationController {
         }
     }
 
-    /**
-     * Show success screen
-     */
     private void showSuccess() {
         successBox.setVisible(true);
         successBox.setManaged(true);
@@ -65,14 +68,8 @@ public class PaymentConfirmationController {
         amountLabel.setText(String.format("Amount: $%.2f", amount));
         ticketInfoLabel.setText(String.format("%s - Zone %s (Qty: %d)",
                 getTicketTypeDisplayName(ticketType), zone, quantity));
-
-        System.out.println("Payment successful!");
-        System.out.println("Transaction ID: " + transactionId);
     }
 
-    /**
-     * Show failure screen
-     */
     private void showFailure() {
         successBox.setVisible(false);
         successBox.setManaged(false);
@@ -81,14 +78,8 @@ public class PaymentConfirmationController {
 
         errorMessageLabel.setText("Payment could not be processed. Please check your card details and try again.");
         failedTransactionIdLabel.setText("Transaction ID: " + transactionId);
-
-        System.err.println("Payment failed!");
-        System.err.println("Transaction ID: " + transactionId);
     }
 
-    /**
-     * Get display name for ticket type
-     */
     private String getTicketTypeDisplayName(String ticketType) {
         switch (ticketType) {
             case "BUY_SINGLE_TICKET": return "Single Ticket";
@@ -98,9 +89,6 @@ public class PaymentConfirmationController {
         }
     }
 
-    /**
-     * Handle print ticket button
-     */
     @FXML
     public void handlePrintTicket(ActionEvent event) {
         System.out.println("Printing ticket...");
@@ -110,19 +98,18 @@ public class PaymentConfirmationController {
         // TODO: Implement actual printing functionality
     }
 
-    /**
-     * Handle done button (success flow)
-     */
     @FXML
     public void handleDone(ActionEvent event) {
-        switchScene("Main Screen", event, "/fxml/MainScreen.fxml");
+        if (mainContainer != null) {
+            // Navigate back to MainScreen
+            NavigationUtil.setContent(mainContainer, "/fxml/MainScreen.fxml");
+        }
     }
 
-    /**
-     * Handle refund button (failure flow)
-     */
     @FXML
     public void handleRefund(ActionEvent event) {
+        if (paymentGateway == null) return;
+
         System.out.println("Processing refund for transaction: " + transactionId);
 
         TransactionStatus refundStatus = paymentGateway.refundPayment(transactionId);
@@ -130,26 +117,23 @@ public class PaymentConfirmationController {
         if (refundStatus == TransactionStatus.REFUNDED) {
             errorMessageLabel.setText("Refund processed successfully. Amount will be credited back to your account.");
             errorMessageLabel.setStyle("-fx-text-fill: green;");
-            System.out.println("Refund successful");
         } else {
             errorMessageLabel.setText("Refund failed. Please contact customer support.");
             System.err.println("Refund failed");
         }
     }
 
-    /**
-     * Handle retry button (failure flow)
-     */
     @FXML
     public void handleRetry(ActionEvent event) {
-        switchScene("Ticket Summary", event, "/fxml/TicketSummaryScreen.fxml");
+        if (mainContainer != null) {
+            NavigationUtil.setContent(mainContainer, "/fxml/TicketSummaryScreen.fxml");
+        }
     }
 
-    /**
-     * Handle cancel button (failure flow)
-     */
     @FXML
     public void handleCancel(ActionEvent event) {
-        switchScene("iGo", event, "/fxml/MainScreen.fxml");
+        if (mainContainer != null) {
+            NavigationUtil.setContent(mainContainer, "/fxml/MainScreen.fxml");
+        }
     }
 }

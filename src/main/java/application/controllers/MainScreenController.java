@@ -1,39 +1,71 @@
 package application.controllers;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.layout.StackPane;
 
-import static application.controllers.NavigationUtil.navigateToZoneType;
-import static application.controllers.NavigationUtil.switchScene;
-import java.io.IOException;
-
+/**
+ * Controller for the main screen content (service selection).
+ * All navigation is done via the mainContainer inside BorderContainer.
+ */
 public class MainScreenController {
 
-
     @FXML
-    public void handleBuySingleTicket(ActionEvent event) {
-        navigateToZoneType(event, "BUY_SINGLE_TICKET");
+    private StackPane mainContainer; // injected from BorderContainer
+    public void setMainContainer(StackPane mainContainer) {
+        this.mainContainer = mainContainer;
     }
 
-    @FXML
-    public void handleBuyMultipleTickets(ActionEvent event) {
-        navigateToZoneType(event, "BUY_MULTIPLE_TICKETS");
+    /**
+     * Generic helper to navigate to a screen and initialize its controller.
+     */
+    private <T> void navigateTo(String fxmlPath, Class<T> controllerClass, ControllerInitializer<T> initializer) {
+        NavigationUtil.setContent(mainContainer, fxmlPath, controller -> {
+            if (controllerClass.isInstance(controller)) {
+                initializer.setup(controllerClass.cast(controller));
+            }
+        });
     }
 
+    /** Navigate to ZoneTypeScreen for single ticket purchase */
     @FXML
-    public void handleRechargeOpusCard(ActionEvent event) {
-        switchScene("Recharge Opus Card", event, "/fxml/OpusCardScreen.fxml");
+    private void handleBuySingleTicket() {
+        navigateTo("/fxml/ZoneTypeScreen.fxml", ZoneTypeController.class, ztc -> {
+            ztc.setPreviousAction("BUY_SINGLE_TICKET");
+            ztc.setMainContainer(mainContainer);
+        });
     }
 
+    /** Navigate to ZoneTypeScreen for multiple ticket purchase */
     @FXML
-    public void handleBuyUnlimitedPass(ActionEvent event) {
-        switchScene("Buy Unlimited Pass", event, "/fxml/UnlimitedPassScreen.fxml");
+    private void handleBuyMultipleTickets() {
+        navigateTo("/fxml/ZoneTypeScreen.fxml", ZoneTypeController.class, ztc -> {
+            ztc.setPreviousAction("BUY_MULTIPLE_TICKETS");
+            ztc.setMainContainer(mainContainer);
+        });
     }
 
+    /** Navigate to OPUS card recharge screen */
+    @FXML
+    private void handleRechargeOpusCard() {
+        navigateTo("/fxml/OpusCardScreen.fxml", OpusCardController.class, opc -> {
+            opc.setMainContainer(mainContainer);
+        });
+    }
+
+    /** Navigate to unlimited pass purchase screen */
+    @FXML
+    private void handleBuyUnlimitedPass() {
+        navigateTo("/fxml/UnlimitedPassScreen.fxml", UnlimitedPassController.class, upc -> {
+            upc.setMainContainer(mainContainer);
+        });
+    }
+
+    /**
+     * Functional interface for controller initialization.
+     * Allows setting the mainContainer or other properties dynamically.
+     */
+    @FunctionalInterface
+    private interface ControllerInitializer<T> {
+        void setup(T controller);
+    }
 }

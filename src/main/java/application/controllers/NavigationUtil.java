@@ -1,26 +1,32 @@
 package application.controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.layout.StackPane;
+
 import java.io.IOException;
+import java.util.function.Consumer;
 
 public class NavigationUtil {
 
-    public static void switchScene(String stageTitle, ActionEvent event, String fxmlPath) {
+    /**
+     * Load an FXML screen into a StackPane dynamically
+     *
+     * @param container StackPane where the new content will be injected
+     * @param fxmlPath  Path to the FXML file
+     * @param controllerSetup Optional lambda to configure the controller after loading
+     */
+    public static void setContent(StackPane container, String fxmlPath, Consumer<Object> controllerSetup) {
         try {
             FXMLLoader loader = new FXMLLoader(NavigationUtil.class.getResource(fxmlPath));
-            Parent newScreen = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(newScreen);
-            stage.setFullScreenExitHint("");
-            stage.setScene(scene);
-            stage.setTitle(stageTitle);
-            stage.setFullScreen(true);
-            stage.show();
+            Parent screen = loader.load();
+
+            if (controllerSetup != null) {
+                Object controller = loader.getController();
+                controllerSetup.accept(controller);
+            }
+
+            container.getChildren().setAll(screen);
 
         } catch (IOException e) {
             System.err.println("Error loading FXML: " + fxmlPath);
@@ -29,27 +35,24 @@ public class NavigationUtil {
     }
 
     /**
-     * Navigate to Zone Type selection screen with action context
+     * Overload for cases where you don't need to configure the controller
      */
-    static void navigateToZoneType(ActionEvent event, String action) {
+    public static void setContent(StackPane container, String fxmlPath) {
+        setContent(container, fxmlPath, null);
+    }
+
+    /**
+     * Utility to load controller only, without injecting into UI
+     */
+    public static Object loadFXMLController(String fxmlPath) {
         try {
-            FXMLLoader loader = new FXMLLoader(NavigationUtil.class.getResource("/fxml/ZoneTypeScreen.fxml"));
-            Parent zoneTypeScreen = loader.load();
-
-            // Get the controller and pass the action
-            ZoneTypeController controller = loader.getController();
-            controller.setPreviousAction(action);
-
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(zoneTypeScreen);
-            stage.setTitle("Select Zone Type");
-            stage.setFullScreenExitHint("");
-            stage.setScene(scene);
-            stage.setFullScreen(true);
-
-            stage.show();
+            FXMLLoader loader = new FXMLLoader(NavigationUtil.class.getResource(fxmlPath));
+            loader.load();
+            return loader.getController();
         } catch (IOException e) {
+            System.err.println("Error loading controller for FXML: " + fxmlPath);
             e.printStackTrace();
+            return null;
         }
     }
 }
