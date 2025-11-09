@@ -8,8 +8,7 @@
 
 <VBox fx:id="zoneTypeRoot"
       alignment="CENTER"
-      spacing="40"
-      style="-fx-padding: 40;"
+      spacing="20"
       xmlns="http://javafx.com/javafx/25"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="application.controllers.ZoneTypeController">
@@ -73,9 +72,9 @@
     </VBox>
 
     <Button onAction="#handleBack"
-            text="← Back"
-            style="-fx-background-color: #667eea;
-                   -fx-text-fill: white;
+            text="Cancel"
+            style="-fx-background-color: #e0e0e0;
+                   -fx-text-fill: #333;
                    -fx-background-radius: 8;
                    -fx-font-size: 16;
                    -fx-font-weight: bold;
