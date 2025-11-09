@@ -6,7 +6,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="zoneTypeRoot" alignment="CENTER" spacing="40" style="-fx-padding: 40;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ZoneTypeController">
+<VBox fx:id="zoneTypeRoot"
+      alignment="CENTER"
+      spacing="40"
+      style="-fx-padding: 40;"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.controllers.ZoneTypeController">
 
     <Label text="Select Zone Type" textFill="#333333">
         <font>
@@ -21,11 +27,57 @@
     </Label>
 
     <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
-        <Button onAction="#handleZoneA" prefWidth="300" text="Zone A" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
-        <Button onAction="#handleZoneAB" prefWidth="300" text="Zone AB" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
-        <Button onAction="#handleZoneABC" prefWidth="300" text="Zone ABC" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
-        <Button onAction="#handleZoneABCD" prefWidth="300" text="Zone ABCD" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+        <Button onAction="#handleZoneA"
+                prefWidth="300"
+                text="Zone A"
+                style="-fx-font-size: 24; -fx-font-weight: bold;
+                       -fx-background-color: white;
+                       -fx-text-fill: #667eea;
+                       -fx-border-color: #667eea;
+                       -fx-border-radius: 8;
+                       -fx-background-radius: 8;
+                       -fx-border-width: 2;"/>
+
+        <Button onAction="#handleZoneAB"
+                prefWidth="300"
+                text="Zone AB"
+                style="-fx-font-size: 24; -fx-font-weight: bold;
+                       -fx-background-color: white;
+                       -fx-text-fill: #667eea;
+                       -fx-border-color: #667eea;
+                       -fx-border-radius: 8;
+                       -fx-background-radius: 8;
+                       -fx-border-width: 2;"/>
+
+        <Button onAction="#handleZoneABC"
+                prefWidth="300"
+                text="Zone ABC"
+                style="-fx-font-size: 24; -fx-font-weight: bold;
+                       -fx-background-color: white;
+                       -fx-text-fill: #667eea;
+                       -fx-border-color: #667eea;
+                       -fx-border-radius: 8;
+                       -fx-background-radius: 8;
+                       -fx-border-width: 2;"/>
+
+        <Button onAction="#handleZoneABCD"
+                prefWidth="300"
+                text="Zone ABCD"
+                style="-fx-font-size: 24; -fx-font-weight: bold;
+                       -fx-background-color: white;
+                       -fx-text-fill: #667eea;
+                       -fx-border-color: #667eea;
+                       -fx-border-radius: 8;
+                       -fx-background-radius: 8;
+                       -fx-border-width: 2;"/>
     </VBox>
 
-    <Button onAction="#handleBack" text="← Back" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 8;"/>
+    <Button onAction="#handleBack"
+            text="← Back"
+            style="-fx-background-color: #667eea;
+                   -fx-text-fill: white;
+                   -fx-background-radius: 8;
+                   -fx-font-size: 16;
+                   -fx-font-weight: bold;
+                   -fx-padding: 10 20;"/>
 </VBox>
