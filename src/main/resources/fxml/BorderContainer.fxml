@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.controllers.BorderContainerController">
+
+    <!-- Top: Header -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #667eea; -fx-padding: 15;">
+            <ImageView fitWidth="50" fitHeight="50">
+                <image>
+                    <!-- Fixed: absolute path from resources root -->
+                    <Image url="@/Images/iGo_icon.png"/>
+                </image>
+            </ImageView>
+            <Label text="iGo TVM System" style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </top>
+
+    <!-- Center: Dynamic content -->
+    <center>
+        <StackPane fx:id="mainContainer" style="-fx-padding: 40;"/>
+    </center>
+
+    <!-- Bottom: Footer -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #333; -fx-padding: 15;">
+            <Label text="© 2025 iGo TVM System | All Rights Reserved"
+                   textFill="white"
+                   opacity="0.7"/>
+        </HBox>
+    </bottom>
+</BorderPane>

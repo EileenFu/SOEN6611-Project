@@ -1,134 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.UnlimitedPassController">
+<VBox fx:id="unlimitedPassRoot" alignment="TOP_CENTER" spacing="30" style="-fx-background-color: #f5f5f5;"
+      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.controllers.UnlimitedPassController">
 
-    <top>
-        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #667eea; -fx-padding: 12;">
-            <children>
-                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../Images/iGo_icon.png" />
-                    </image>
-                </ImageView>
+    <!-- Title -->
+    <Label text="Select Pass Duration" textFill="#333333">
+        <font><Font name="System Bold" size="28.0" /></font>
+    </Label>
+    <Label text="Choose your unlimited pass duration (zone selection comes next)"
+           style="-fx-font-size: 13; -fx-text-fill: #666; -fx-font-style: italic;" />
 
-                <Label text="iGo TVM System" textFill="white">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Label>
+    <!-- Pass Options Grid -->
+    <GridPane hgap="15" vgap="15" alignment="CENTER">
+        <!-- Day Pass -->
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="📅" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="dayPassRadio" text="1 Day Pass" selected="true" style="-fx-font-size: 14; -fx-font-weight: bold;">
+                <toggleGroup><ToggleGroup fx:id="passDurationGroup" /></toggleGroup>
+            </RadioButton>
+            <Label text="Valid for 24 hours" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
 
-                <Region HBox.hgrow="ALWAYS" />
-            </children>
-        </HBox>
-    </top>
+        <!-- 3-Day Pass -->
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="📆" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="threeDayPassRadio" text="3 Day Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Label text="3 consecutive days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
 
-    <center>
-        <ScrollPane fitToWidth="true" style="-fx-background-color: #f5f5f5;">
-            <VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 20;">
-                <children>
-                    <Label text="Select Pass Duration" textFill="#333333">
-                        <font>
-                            <Font name="System Bold" size="28.0" />
-                        </font>
-                    </Label>
+        <!-- Week Pass -->
+        <VBox GridPane.columnIndex="2" GridPane.rowIndex="0" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="📋" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="weekPassRadio" text="Week Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Label text="7 consecutive days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
 
-                    <Label text="Choose your unlimited pass duration (zone selection comes next)" style="-fx-font-size: 13; -fx-text-fill: #666; -fx-font-style: italic;" />
+        <!-- Month Pass -->
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="📅" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="monthPassRadio" text="Monthly Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Label text="Valid for 30 days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
 
-                    <GridPane hgap="15" vgap="15" alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25; -fx-border-color: #ddd; -fx-border-radius: 12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);">
-                        <children>
-                            <!-- Day Pass -->
-                            <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="📅" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="dayPassRadio" text="1 Day Pass" selected="true" style="-fx-font-size: 14; -fx-font-weight: bold;">
-                                    <toggleGroup>
-                                        <ToggleGroup fx:id="passDurationGroup" />
-                                    </toggleGroup>
-                                </RadioButton>
-                                <Label text="Valid for 24 hours" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
+        <!-- Night Pass -->
+        <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="🌙" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="nightPassRadio" text="Night Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Label text="6pm to 5am" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
 
-                            <!-- 3-Day Pass -->
-                            <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="📆" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="threeDayPassRadio" text="3 Day Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
-                                <Label text="3 consecutive days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
+        <!-- Weekend Pass -->
+        <VBox GridPane.columnIndex="2" GridPane.rowIndex="1" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="🎉" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="weekendPassRadio" text="Weekend Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Label text="Sat-Sun unlimited" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
 
-                            <!-- Week Pass -->
-                            <VBox fx:id="weekPassBox" GridPane.columnIndex="2" GridPane.rowIndex="0" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="📋" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="weekPassRadio" text="Week Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
-                                <Label text="7 consecutive days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
+        <!-- 4-Month Pass -->
+        <VBox GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="3" alignment="CENTER" spacing="8"
+              style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9;"
+              prefWidth="180" prefHeight="130">
+            <Label text="📊" style="-fx-font-size: 28;" />
+            <RadioButton fx:id="fourMonthPassRadio" text="4-Month Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Label text="120 consecutive days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
+            <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
+        </VBox>
+    </GridPane>
 
-                            <!-- Monthly Pass -->
-                            <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="📅" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="monthPassRadio" text="Monthly Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
-                                <Label text="Valid for 30 days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
-
-                            <!-- Night Pass -->
-                            <VBox fx:id="nightPassBox" GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="🌙" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="nightPassRadio" text="Night Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
-                                <Label text="6pm to 5am" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
-
-                            <!-- Weekend Pass -->
-                            <VBox fx:id="weekendPassBox" GridPane.columnIndex="2" GridPane.rowIndex="1" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="🎉" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="weekendPassRadio" text="Weekend Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
-                                <Label text="Sat-Sun unlimited" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
-
-                            <!-- 4-Month Pass -->
-                            <VBox fx:id="fourMonthPassBox" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="3" alignment="CENTER" spacing="8" style="-fx-border-color: #ddd; -fx-border-radius: 8; -fx-padding: 15; -fx-background-color: #f9f9f9; -fx-background-radius: 8;" prefWidth="180" prefHeight="130">
-                                <Label text="📊" style="-fx-font-size: 28;" />
-                                <RadioButton fx:id="fourMonthPassRadio" text="4-Month Pass" toggleGroup="$passDurationGroup" style="-fx-font-size: 14; -fx-font-weight: bold;" />
-                                <Label text="120 consecutive days" wrapText="true" style="-fx-font-size: 10; -fx-text-fill: #666; -fx-text-alignment: center;" />
-                                <Label text="All zones available" style="-fx-font-size: 9; -fx-text-fill: #667eea; -fx-font-weight: bold;" />
-                            </VBox>
-                        </children>
-                    </GridPane>
-
-                    <HBox alignment="CENTER" spacing="15" style="-fx-padding: 10 0 20 0;">
-                        <Button onAction="#handleCancel" prefWidth="140" prefHeight="45" style="-fx-background-color: #e0e0e0; -fx-text-fill: #333; -fx-background-radius: 8; -fx-font-size: 15;" text="Back" />
-                        <Button onAction="#handleContinue" prefWidth="140" prefHeight="45" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 8; -fx-font-size: 15; -fx-font-weight: bold;" text="Select Zone" />
-                    </HBox>
-                </children>
-            </VBox>
-        </ScrollPane>
-    </center>
-
-    <bottom>
-        <HBox alignment="CENTER" style="-fx-background-color: #333; -fx-padding: 10;">
-            <Label opacity="0.7" text="© 2025 iGo TVM System | All Rights Reserved" textFill="white">
-                <font>
-                    <Font size="11.0" />
-                </font>
-            </Label>
-        </HBox>
-    </bottom>
-</BorderPane>
+    <!-- Action Buttons -->
+    <HBox alignment="CENTER" spacing="15" style="-fx-padding: 10 0 20 0;">
+        <Button onAction="#handleCancel" prefWidth="140" prefHeight="45"
+                style="-fx-background-color: #e0e0e0; -fx-text-fill: #333; -fx-background-radius: 6; -fx-font-size: 14; -fx-font-weight: bold;"
+                text="Back" />
+        <Button onAction="#handleContinue" prefWidth="140" prefHeight="45"
+                style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-background-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;"
+                text="Select Zone" />
+    </HBox>
+</VBox>
